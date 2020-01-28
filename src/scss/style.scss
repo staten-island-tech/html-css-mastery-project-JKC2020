@@ -2,8 +2,23 @@
 @import "./header";
 html {
   font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 body {
-  background-color: red;
   height: 100%;
+
+}
+.section{
+  height: 100vh;
+}
+.splash{
+  background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.808),rgba(238, 238, 159, 0.822)), url(images/CoverPhoto.jpg);
+  background-size: cover;
+  height: 80vh;
+}
+.History-of-Greece{
+  background-image: linear-gradient(to left bottom,rgba(238, 238, 159, 0.822),rgba(22, 201, 186, 0.808)), url(images/Ocean.jpg);
+  background-size: cover;
 }
