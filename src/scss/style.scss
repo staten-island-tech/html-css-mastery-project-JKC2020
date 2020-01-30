@@ -8,17 +8,27 @@ html {
 }
 body {
   height: 100%;
-
+  background-image: linear-gradient(rgba(82, 216, 221, 0.575),rgba(255, 255, 255, 0.822),rgba(82, 216, 221, 0.575))
 }
 .section{
-  height: 100vh;
+  height: 80vh;
+  clip-path: polygon(0 0,95% 0%, 100% 95%, 0% 100%);
+  border-radius: 3rem;
 }
 .splash{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.808),rgba(238, 238, 159, 0.822)), url(images/CoverPhoto.jpg);
   background-size: cover;
-  height: 80vh;
+
 }
 .History-of-Greece{
-  background-image: linear-gradient(to left bottom,rgba(238, 238, 159, 0.822),rgba(22, 201, 186, 0.808)), url(images/Ocean.jpg);
+  background-image: linear-gradient(to left bottom,rgba(238, 238, 159, 0.664),rgba(22, 201, 186, 0.514)), url(images/Ocean.jpg);
+  background-size: cover;
+}
+.Attractions{
+  background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.404),rgba(238, 238, 159, 0.377)), url(images/Attraction.jpg);
+  background-size: cover;
+}
+.Stories{
+  background-image: url(images/Cafe.jpg);
   background-size: cover;
 }
