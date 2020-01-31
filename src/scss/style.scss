@@ -14,21 +14,20 @@ body {
   height: 80vh;
   clip-path: polygon(0 0,95% 0%, 100% 95%, 0% 100%);
   border-radius: 3rem;
+  background-size: cover;
 }
 .splash{
-  background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.808),rgba(238, 238, 159, 0.822)), url(images/CoverPhoto.jpg);
-  background-size: cover;
-
+  background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.708),rgba(238, 238, 159, 0.722)), url(images/CoverPhoto.jpg);
 }
 .History-of-Greece{
   background-image: linear-gradient(to left bottom,rgba(238, 238, 159, 0.664),rgba(22, 201, 186, 0.514)), url(images/Ocean.jpg);
-  background-size: cover;
 }
 .Attractions{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.404),rgba(238, 238, 159, 0.377)), url(images/Attraction.jpg);
-  background-size: cover;
 }
 .Stories{
-  background-image: url(images/Cafe.jpg);
-  background-size: cover;
+  background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.304),rgba(238, 238, 159, 0.277)),url(Images/Cafe.jpg);
+}
+.Book-Stay{
+  background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.204),rgba(238, 238, 159, 0.177)),url(Images/Book.jpg);
 }
