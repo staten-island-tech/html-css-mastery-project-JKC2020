@@ -5,13 +5,14 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   height: 100%;
   background-image: linear-gradient(rgba(82, 216, 221, 0.575),rgba(255, 255, 255, 0.822),rgba(82, 216, 221, 0.575))
 }
 .section{
-  height: 80vh;
+  height: 90vh;
   clip-path: polygon(0 0,95% 0%, 100% 95%, 0% 100%);
   border-radius: 3rem;
   background-size: cover;
@@ -21,9 +22,42 @@ body {
 .splash{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.708),rgba(238, 238, 159, 0.722)), url(images/CoverPhoto.jpg);
   display: flex;
+  justify-content: center;
 }
 .arrow{
-
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.arrow span{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #06A8FF;
+  border-right: 5px solid #06A8FF;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+  }
 }
 .History-of-Greece{
   background-image: linear-gradient(to left bottom,rgba(238, 238, 159, 0.664),rgba(22, 201, 186, 0.514)), url(images/Ocean.jpg);

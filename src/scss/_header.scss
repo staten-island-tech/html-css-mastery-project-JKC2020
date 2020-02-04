@@ -1,12 +1,10 @@
 .header {
-  display: flex;
-  justify-content: center;
   height: 30vh;
   animation-name: pop_in;
   animation-duration: 3s;
   text-align: center;
   text-transform: uppercase;
-  font-size: 10vh;
+  font-size: 8vh;
   font-family: 'Uncial Antiqua', cursive;
   text-shadow: 1vh 1vh black;
   color: white;
@@ -19,4 +17,39 @@
   100%{
     transform: scale(1);
   }
+}
+.title:hover{
+
+    transform: scale(2);
+}
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.tada {
+  animation-name: tada;
 }
