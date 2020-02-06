@@ -6,8 +6,8 @@ html {
   height: 30vh;
   -webkit-animation-name: pop_in;
           animation-name: pop_in;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   text-align: center;
   text-transform: uppercase;
   font-size: 8vh;
@@ -40,8 +40,8 @@ html {
 }
 
 .title:hover {
-  -webkit-transform: scale(2);
-          transform: scale(2);
+  -webkit-animation: tada 1s;
+          animation: tada 1s;
 }
 
 @-webkit-keyframes tada {
@@ -100,11 +100,6 @@ html {
     -webkit-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1);
   }
-}
-
-.tada {
-  -webkit-animation-name: tada;
-          animation-name: tada;
 }
 
 html {
@@ -207,8 +202,40 @@ body {
 }
 
 .History-of-Greece {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(238, 238, 159, 0.664)), to(rgba(22, 201, 186, 0.514))), url(images/Ocean.jpg);
   background-image: linear-gradient(to left bottom, rgba(238, 238, 159, 0.664), rgba(22, 201, 186, 0.514)), url(images/Ocean.jpg);
+}
+
+.History-Header {
+  height: 20vh;
+}
+
+.content-block {
+  height: 80vh;
+}
+
+.image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 40vh;
+  width: 60%;
+}
+
+.History-Images {
+  height: auto;
+  width: 30vh;
+  overflow: hidden;
 }
 
 .Attractions {

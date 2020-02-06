@@ -60,7 +60,26 @@ body {
   }
 }
 .History-of-Greece{
+  flex-direction: row;
   background-image: linear-gradient(to left bottom,rgba(238, 238, 159, 0.664),rgba(22, 201, 186, 0.514)), url(images/Ocean.jpg);
+}
+.History-Header{
+  height: 20vh;
+}
+.content-block{
+  height: 80vh;
+}
+.image-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 40vh;
+  width: 60%;
+}
+.History-Images{
+  height: auto;
+  width: 30vh;
+  overflow: hidden;
 }
 .Attractions{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.404),rgba(238, 238, 159, 0.377)), url(images/Attraction.jpg);
