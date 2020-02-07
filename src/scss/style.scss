@@ -1,5 +1,6 @@
 @import "./_fonts.scss";
 @import "./header";
+@import "./animations";
 html {
   font-size: 62.5%;
   padding: 0;
@@ -10,6 +11,144 @@ html {
 body {
   height: 100%;
   background-image: linear-gradient(rgba(82, 216, 221, 0.575),rgba(255, 255, 255, 0.822),rgba(82, 216, 221, 0.575))
+}
+.navigation_checkbox{
+	display: none;
+}
+
+.navigation_button{
+	background-color: white;
+	height: 7rem;
+	width: 7rem;
+	border-radius: 50%;
+	position: fixed;
+	top: 6rem;
+	right: 6rem;
+	z-index: 10000;
+	box-shadow: 0 1rem 3rem rgba(0,0,0,0.5);
+	text-align: center;
+	cursor: pointer;
+}
+
+.navigation_icon{
+	position: relative;
+	margin-top: 3.5rem;
+}
+
+.navigation_icon::before, .navigation_icon::after{
+	content: "";
+}
+
+.navigation_icon::before{
+	position: absolute;
+	top: -1rem;
+	left: 0;
+}
+
+.navigation_icon::after{
+	position: absolute;
+	top: 1rem;
+	left: 0;
+}
+
+.navigation_icon, .navigation_icon:before, .navigation_icon:after{
+	width: 3rem;
+	height: 2px;
+	background-color: #333;
+	display: inline-block;
+	transition: all .2s;
+}
+
+.navigation_button:hover .navigation_icon::before{
+	top: -1.2rem;
+}
+
+.navigation_button:hover .navigation_icon::after{
+	top: 1.2rem;
+}
+
+.navigation_checkbox:checked + .navigation_button .navigation_icon::before{
+	transform: rotate(495deg);
+	top: 0rem;
+}
+
+.navigation_checkbox:checked + .navigation_button .navigation_icon::after{
+	transform: rotate(-495deg);
+	top: 0rem;
+}
+
+.navigation_checkbox:checked + .navigation_button .navigation_icon{
+	background-color: transparent;
+}
+
+.navigation_list{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	list-style: none;
+	text-align: center;
+	width: 100%;
+}
+
+.navigation_item{
+	margin: 1rem;
+}
+
+.navigation_nav{
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -10;
+	opacity: 0;
+	width: 0%;
+	transition: all .8s; 
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	/*display: none;*/
+
+}
+
+.navigation_background{
+	height: 6rem;
+	width: 6rem;
+	border-radius: 50%;
+	position: fixed;
+	top: 6.5rem;
+	right: 6.5rem;
+	background-image: radial-gradient(
+		rgba(37, 176, 241, 0.5),
+		rgba(42, 158, 139, 0.5));
+	z-index: 30;
+	transition: .8s;
+	/*transform: scale(80);*/
+}
+
+.navigation_checkbox:checked~.navigation_background{
+	transform: scale(80);
+}
+
+.navigation_checkbox:checked~.navigation_nav{
+	/*display: initial;*/
+	opacity: 1;
+	z-index: 200;
+	width: 100%;
+}
+
+.navigation_item{
+	font-family: 'Permanent Marker', cursive;
+	font-size: 5rem;
+}
+
+.navigation_link{
+	text-decoration: none;
+	color: black;
+}
+
+.navigation_link:hover{
+	text-shadow: -1rem -1rem var(--color-primary-light),
+	 1rem 1rem var(--color-primary-dark);
+	 transition: 1s;
 }
 .section{
   height: 90vh;
@@ -46,40 +185,54 @@ body {
 .arrow span:nth-child(3){
   animation-delay: -0.4s;
 }
-@keyframes animate {
-  0%{
-      opacity: 0;
-      transform: rotate(45deg) translate(-20px,-20px);
-  }
-  50%{
-      opacity: 1;
-  }
-  100%{
-      opacity: 0;
-      transform: rotate(45deg) translate(20px,20px);
-  }
-}
 .History-of-Greece{
   flex-direction: row;
   background-image: linear-gradient(to left bottom,rgba(238, 238, 159, 0.664),rgba(22, 201, 186, 0.514)), url(images/Ocean.jpg);
 }
 .History-Header{
+  display: flex;
   height: 20vh;
+  font-size: 16vh;
+  justify-content: center;
 }
 .content-block{
-  height: 80vh;
+  display: flex;
+  height: 60vh;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .image-container{
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
-  height: 40vh;
+  height: 45vh;
   width: 60%;
 }
 .History-Images{
-  height: auto;
+  height: inherit;
   width: 30vh;
   overflow: hidden;
+  border: 1vh solid #e3e7ec;
+  transition: 4s;
+  border-radius: 50%;
+}
+.Alexander:hover{
+  transition-duration: 3s;
+  background-color: white;
+  animation: flash 2s;
+}
+.Acropolis:hover{
+  backface-visibility: visible;
+  animation: flip 3s;
+}
+.Statue:hover{
+  animation: pulse 2s infinite;
+}
+.Text{
+  width: 30%;
+  display: flex;
+  font-size: 4vh;
+  align-items: center;
+  justify-content: space-around;
 }
 .Attractions{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.404),rgba(238, 238, 159, 0.377)), url(images/Attraction.jpg);
