@@ -387,7 +387,7 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(rgba(37, 176, 241, 0.5), rgba(42, 158, 139, 0.5));
+  background-image: radial-gradient(rgba(37, 176, 241, 0.5), rgba(66, 229, 235, 0.5));
   z-index: 30;
   -webkit-transition: .8s;
   transition: .8s;
@@ -433,8 +433,8 @@ body {
 }
 
 .splash {
-  background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(22, 201, 186, 0.708)), to(rgba(238, 238, 159, 0.722))), url(images/CoverPhoto.jpg);
-  background-image: linear-gradient(to left bottom, rgba(22, 201, 186, 0.708), rgba(238, 238, 159, 0.722)), url(images/CoverPhoto.jpg);
+  background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(29, 218, 231, 0.608)), to(rgba(238, 238, 159, 0.722))), url(images/CoverPhoto.jpg);
+  background-image: linear-gradient(to left bottom, rgba(29, 218, 231, 0.608), rgba(238, 238, 159, 0.722)), url(images/CoverPhoto.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -564,6 +564,12 @@ body {
 .Attractions {
   background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(22, 201, 186, 0.404)), to(rgba(238, 238, 159, 0.377))), url(images/Attraction.jpg);
   background-image: linear-gradient(to left bottom, rgba(22, 201, 186, 0.404), rgba(238, 238, 159, 0.377)), url(images/Attraction.jpg);
+}
+
+.card {
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  position: relative;
 }
 
 .Stories {
