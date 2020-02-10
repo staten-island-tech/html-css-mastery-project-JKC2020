@@ -1,14 +1,32 @@
+@import "./variables";
+@import "./_fonts.scss";
+
 .header {
   height: 30vh;
+  width: auto;
   animation-name: pop_in;
   animation-duration: 2s;
   text-align: center;
   text-transform: uppercase;
-  font-size: 8vh;
   font-family: 'Uncial Antiqua', cursive;
   text-shadow: 1vh 1vh black;
   color: white;
-  padding: 15vh;
+  font-size: 8vh;
+  @include phone {
+    font-size: 4vh;
+  }
+  @include tablet {
+    font-size: 4vh;
+  }
+  @include laptop {
+    font-size: 6vh;
+  }
+  @include desktop {
+    font-size: 6vh;
+  }
+}
+.title{
+  
 }
 @keyframes pop_in{
   0%{

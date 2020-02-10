@@ -1,6 +1,7 @@
 @import "./_fonts.scss";
 @import "./header";
 @import "./animations";
+@import "./variables";
 html {
   font-size: 62.5%;
   padding: 0;
@@ -245,7 +246,7 @@ body {
 	margin-right: auto;
 }
 .card-side{
-	height: ;
+	
 }
 .Stories{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.304),rgba(238, 238, 159, 0.277)),url(Images/Cafe.jpg);
