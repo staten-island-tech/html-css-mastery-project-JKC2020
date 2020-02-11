@@ -189,6 +189,12 @@ body {
 .History-of-Greece{
   flex-direction: row;
   background-image: linear-gradient(to left bottom,rgba(238, 238, 159, 0.664),rgba(22, 201, 186, 0.514)), url(images/Ocean.jpg);
+  @include phone {
+	height: 150vh;
+  }
+  @include tablet {
+	height: 90vh;
+  }
 }
 .History-Header{
   display: flex;
@@ -197,6 +203,7 @@ body {
   justify-content: center;
   @include phone {
 	font-size: 8vh;
+	align-items: center;
   }
 }
 .content-block{
@@ -206,6 +213,15 @@ body {
   justify-content: space-evenly;
   @include phone {
 	flex-direction: column;
+	height: 80vh;
+  }
+  @include tablet {
+	flex-direction: column;
+	height: 60vh;
+  }
+  @include laptop {
+	flex-direction: row;
+	height: 60vh;
   }
 
 }
@@ -215,7 +231,17 @@ body {
   height: 45vh;
   width: 60%;
   @include phone {
-	width: 90%
+	width: 90%;
+	flex-direction: column;
+  }
+  @include tablet {
+	width: 90%;	
+	flex-direction: row;
+
+  }
+  @include laptop {
+	width: 60%;	
+	flex-direction: row;
   }
 }
 .History-Images{
@@ -226,6 +252,10 @@ body {
   transition: 4s;
   border-radius: 50%;
   @include phone {
+	width: auto;
+	height: 40vh;
+  }
+  @include tablet {
 	width: auto;
 	height: 40vh;
   }
@@ -248,8 +278,14 @@ body {
   font-size: 4vh;
   align-items: center;
   justify-content: space-around;
+  font-style: italic;
+  font-weight: bolder;
   @include phone {
 	font-size: 2vh;
+	width: 80%;
+  }
+  @include laptop{
+	width: 30%;
   }
 }
 .Attractions{
