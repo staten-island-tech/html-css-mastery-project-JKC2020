@@ -1,14 +1,16 @@
 .header {
+  display: flex;
   height: 30vh;
   animation-name: pop_in;
   animation-duration: 2s;
-  text-align: center;
+  justify-content: center;
   text-transform: uppercase;
   font-size: 8vh;
   font-family: 'Uncial Antiqua', cursive;
   text-shadow: 1vh 1vh black;
   color: white;
   padding: 15vh;
+  overflow: hidden;
 }
 @keyframes pop_in{
   0%{

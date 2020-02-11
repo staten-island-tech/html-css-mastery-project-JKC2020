@@ -3,18 +3,24 @@ html {
 }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 30vh;
   -webkit-animation-name: pop_in;
           animation-name: pop_in;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-transform: uppercase;
   font-size: 8vh;
   font-family: 'Uncial Antiqua', cursive;
   text-shadow: 1vh 1vh black;
   color: white;
   padding: 15vh;
+  overflow: hidden;
 }
 
 @-webkit-keyframes pop_in {
@@ -569,7 +575,54 @@ body {
 .card {
   -webkit-perspective: 150rem;
           perspective: 150rem;
+  -moz-perspective: 150rem;
   position: relative;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-side {
+  height: 500px;
+  width: 300px;
+  font-size: 15px;
+  color: white;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.card-side-front {
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.card-side-back {
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.card:hover .card-side-front {
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+
+.card:hover .card-side-back {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
 }
 
 .Stories {
