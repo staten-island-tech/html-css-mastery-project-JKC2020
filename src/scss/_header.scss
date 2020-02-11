@@ -14,22 +14,22 @@
   color: white;
   padding: 15vh;
   overflow: hidden;
-  font-size: 8vh;
-  @include phone {
-    font-size: 4vh;
-  }
-  @include tablet {
-    font-size: 4vh;
-  }
-  @include laptop {
-    font-size: 6vh;
-  }
-  @include desktop {
-    font-size: 6vh;
-  }
+
 }
 .title{
-  
+  @include phone {
+    font-size: 8vh;
+  }
+  @include tablet {
+    font-size: 10vh;
+  }
+  @include laptop {
+    font-size: 14vh;
+  }
+  @include desktop {
+    font-size: 16vh;
+  }
+
 }
 @keyframes pop_in{
   0%{

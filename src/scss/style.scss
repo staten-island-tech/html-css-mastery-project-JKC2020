@@ -195,18 +195,28 @@ body {
   height: 20vh;
   font-size: 16vh;
   justify-content: center;
+  @include phone {
+	font-size: 8vh;
+  }
 }
 .content-block{
   display: flex;
   height: 60vh;
   align-items: center;
   justify-content: space-evenly;
+  @include phone {
+	flex-direction: column;
+  }
+
 }
 .image-container{
   display: flex;
   justify-content: space-evenly;
   height: 45vh;
   width: 60%;
+  @include phone {
+	width: 90%
+  }
 }
 .History-Images{
   height: inherit;
@@ -215,6 +225,10 @@ body {
   border: 1vh solid #e3e7ec;
   transition: 4s;
   border-radius: 50%;
+  @include phone {
+	width: auto;
+	height: 40vh;
+  }
 }
 .Alexander:hover{
   transition-duration: 3s;
@@ -234,6 +248,9 @@ body {
   font-size: 4vh;
   align-items: center;
   justify-content: space-around;
+  @include phone {
+	font-size: 2vh;
+  }
 }
 .Attractions{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.404),rgba(238, 238, 159, 0.377)), url(images/Attraction.jpg);
