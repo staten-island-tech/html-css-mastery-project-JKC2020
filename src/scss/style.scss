@@ -197,13 +197,14 @@ body {
   }
 }
 .History-Header{
-  display: flex;
   height: 20vh;
   font-size: 16vh;
+  display: flex;
   justify-content: center;
   @include phone {
 	font-size: 8vh;
-	align-items: center;
+	align-content: center;
+	text-align: center;
   }
 }
 .content-block{
@@ -213,7 +214,7 @@ body {
   justify-content: space-evenly;
   @include phone {
 	flex-direction: column;
-	height: 80vh;
+	height: 120vh;
   }
   @include tablet {
 	flex-direction: column;
@@ -233,15 +234,19 @@ body {
   @include phone {
 	width: 90%;
 	flex-direction: column;
+	height: 90vh;
+	align-items: center;
+	justify-content: space-evenly ;
   }
   @include tablet {
 	width: 90%;	
 	flex-direction: row;
-
+	height: 45vh;
   }
   @include laptop {
 	width: 60%;	
 	flex-direction: row;
+	height: 45vh;
   }
 }
 .History-Images{
@@ -252,11 +257,9 @@ body {
   transition: 4s;
   border-radius: 50%;
   @include phone {
-	width: auto;
-	height: 40vh;
+	height: 30vh;
   }
   @include tablet {
-	width: auto;
 	height: 40vh;
   }
 }
@@ -280,6 +283,7 @@ body {
   justify-content: space-around;
   font-style: italic;
   font-weight: bolder;
+  backdrop-filter: blur(4px) grayscale(50%);
   @include phone {
 	font-size: 2vh;
 	width: 80%;
