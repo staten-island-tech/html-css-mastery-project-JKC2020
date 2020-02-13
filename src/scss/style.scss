@@ -264,13 +264,13 @@ body {
   }
 }
 .Alexander:hover{
-  transition-duration: 3s;
+  transition-duration: 5s;
   background-color: white;
-  animation: flash 2s;
+  animation: pulse-flash 2s;
 }
 .Acropolis:hover{
   backface-visibility: visible;
-  animation: flip 3s;
+  animation: pulse 2s;
 }
 .Statue:hover{
   animation: pulse 2s infinite;
