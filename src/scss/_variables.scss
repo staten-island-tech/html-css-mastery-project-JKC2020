@@ -23,3 +23,19 @@ $desktop: 1100px;
     @content;
   }
 }
+@mixin Card-B {
+  background-color: White;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transform: rotateY(180deg);
+  transition: all 1s;
+}
+@mixin Card-F {
+	background-color: White;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	transition: all 1s;
+}

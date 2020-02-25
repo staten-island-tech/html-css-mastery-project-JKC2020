@@ -692,6 +692,32 @@ body {
           flex-direction: row;
 }
 
+@media (min-width: 300px) {
+  .Attractions {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 220vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 900px) {
+  .Attractions {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 90vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .card {
   -webkit-perspective: 150rem;
           perspective: 150rem;
@@ -700,6 +726,30 @@ body {
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.card-side-front {
+  background-color: White;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-radius: 10%;
+}
+
+.card-side-back {
+  background-color: White;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-radius: 10%;
+  opacity: 80%;
 }
 
 .card-side {
@@ -713,27 +763,6 @@ body {
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 
-.card-side-front {
-  background-color: red;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-.card-side-back {
-  background-color: blue;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
 .card:hover .card-side-front {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
@@ -742,6 +771,12 @@ body {
 .card:hover .card-side-back {
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
+}
+
+.Santorini-F {
+  background-image: url(Images/Santorini.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .Stories {
