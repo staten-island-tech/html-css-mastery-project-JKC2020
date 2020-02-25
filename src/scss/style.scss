@@ -296,16 +296,24 @@ body {
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.404),rgba(238, 238, 159, 0.377)), url(images/Attraction.jpg);
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   @include phone {
-	justify-content: space-evenly;
-	height: 220vh;
+	height: 235vh;
 	flex-direction: column;
+	clip-path: polygon(0 0,98% 0%, 100% 99%, 0% 100%);
+	align-items: center;
   }
   @include tablet {
 	flex-direction: row;
 	height: 90vh;
-	align-items: center;
+	clip-path: polygon(0 0,97% 0%, 100% 95%, 0% 100%);
   }
+}
+.Attractions-Header{
+	height: 20vh;
+	font-size: 16vh;
+	display: flex;
+	justify-content: center;
 }
 .card{
 	perspective: 150rem;
@@ -360,6 +368,11 @@ body {
 	
 }
 
+.Temple-F{
+	background-image: url(Images/Temple.jpg);
+	background-position: center;
+	background-size: cover;
+}
 .Stories{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.304),rgba(238, 238, 159, 0.277)),url(Images/Cafe.jpg);
 }
