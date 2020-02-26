@@ -197,14 +197,17 @@ body {
   }
 }
 .History-Header{
-  height: 20vh;
+  height: 16vh;
   font-size: 16vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   @include phone {
 	font-size: 8vh;
-	align-content: center;
-	text-align: center;
+  }
+  @include laptop{
+	  font-size: 16vh;	  
   }
 }
 .content-block{
@@ -295,25 +298,44 @@ body {
 .Attractions{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.404),rgba(238, 238, 159, 0.377)), url(images/Attraction.jpg);
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
   @include phone {
-	height: 235vh;
-	flex-direction: column;
+	height: 255vh;
 	clip-path: polygon(0 0,98% 0%, 100% 99%, 0% 100%);
-	align-items: center;
   }
   @include tablet {
-	flex-direction: row;
 	height: 90vh;
 	clip-path: polygon(0 0,97% 0%, 100% 95%, 0% 100%);
   }
 }
 .Attractions-Header{
-	height: 20vh;
+	height: 16vh;
 	font-size: 16vh;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	@include phone {
+		font-size: 8vh;
+	  }
+	  @include laptop{
+		  font-size: 16vh;
+	  }
+}
+.card-box{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-evenly;
+	@include phone{
+		flex-direction: column;
+		justify-content: space-evenly;
+		height: 230vh;
+	}
+	@include tablet{
+		flex-direction: row;
+		align-items: center;
+		height: 60vh;
+	}
 }
 .card{
 	perspective: 150rem;
@@ -343,12 +365,13 @@ body {
 	opacity: 80%;
 }
 .card-side{
-	height: 500px;
-	width: 300px;
+	height: 450px;
+	width: 270px;
 	font-size: 15px;
 	color: white;
 	backface-visibility: hidden;
 	box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
+
 }
 
 .card:hover .card-side-front{
@@ -370,6 +393,11 @@ body {
 
 .Temple-F{
 	background-image: url(Images/Temple.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.Stairs-F{
+	background-image: url(Images/Stairs.jpg);
 	background-position: center;
 	background-size: cover;
 }
