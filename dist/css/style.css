@@ -25,6 +25,8 @@ html {
   color: white;
   padding: 15vh;
   overflow: hidden;
+  -webkit-transition: 5s;
+  transition: 5s;
 }
 
 @media (min-width: 300px) {
@@ -453,13 +455,15 @@ body {
 
 .arrow span {
   display: block;
-  width: 30px;
-  height: 30px;
   border-bottom: 5px solid #06A8FF;
   border-right: 5px solid #06A8FF;
+  width: 30px;
+  height: 30px;
+  margin: -10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  margin: -10px;
+  -webkit-transition: 10s;
+  transition: 10s;
   -webkit-animation: animate 2s infinite;
           animation: animate 2s infinite;
 }
@@ -508,6 +512,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  color: white;
 }
 
 @media (min-width: 300px) {
@@ -727,6 +732,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: white;
 }
 
 @media (min-width: 300px) {

@@ -172,12 +172,13 @@ body {
 }
 .arrow span{
   display: block;
-  width: 30px;
-  height: 30px;
   border-bottom: 5px solid #06A8FF;
   border-right: 5px solid #06A8FF;
-  transform: rotate(45deg);
+  width: 30px;
+  height: 30px;
   margin: -10px;
+  transform: rotate(45deg);
+  transition: 10s;
   animation: animate 2s infinite;
 }
 .arrow span:nth-child(2){
@@ -203,6 +204,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: white;
   @include phone {
 	font-size: 8vh;
   }
@@ -314,6 +316,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: white;
 	@include phone {
 		font-size: 8vh;
 	  }

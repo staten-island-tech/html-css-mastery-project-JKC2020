@@ -14,7 +14,7 @@
   color: white;
   padding: 15vh;
   overflow: hidden;
-
+  transition: 5s;
 }
 .title{
   @include phone {
