@@ -383,15 +383,20 @@ body {
 .card:hover .card-side-back{
 	transform: rotateY(0deg);
 }
-
+.card-text{
+	display: flex;
+	color: black;
+	font-size: 2rem;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	height: inherit;
+	word-spacing: 10px;
+}
 .Santorini-F{
 	background-image: url(Images/Santorini.jpg);
 	background-position: center;
 	background-size: cover;
-}
-
-.Santorini-B{
-	
 }
 
 .Temple-F{
@@ -404,6 +409,7 @@ body {
 	background-position: center;
 	background-size: cover;
 }
+
 .Stories{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.304),rgba(238, 238, 159, 0.277)),url(Images/Cafe.jpg);
 }
