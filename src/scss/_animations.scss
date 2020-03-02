@@ -53,5 +53,12 @@
       transform: scale3d(1, 1, 1);
     }
   }
-
+@keyframes op{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
   

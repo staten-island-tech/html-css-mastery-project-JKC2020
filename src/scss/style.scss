@@ -365,7 +365,6 @@ body {
     transform: rotateY(180deg);
 	transition: all 1s;
 	border-radius: 10%;
-	opacity: 80%;
 }
 .card-side{
 	height: 450px;
@@ -382,34 +381,35 @@ body {
 }
 .card:hover .card-side-back{
 	transform: rotateY(0deg);
+	animation: op 4s;
+}
+
+.Santorini{
+	background-image: url(Images/Santorini.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.Temple{
+	background-image: url(Images/Temple.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.Stairs{
+	background-image: url(Images/Stairs.jpg);
+	background-position: center;
+	background-size: cover;
 }
 .card-text{
 	display: flex;
-	color: black;
+	color: white;
 	font-size: 2rem;
 	text-align: center;
 	flex-direction: column;
 	justify-content: center;
 	height: inherit;
 	word-spacing: 10px;
+	-webkit-text-stroke: .1px black;
 }
-.Santorini-F{
-	background-image: url(Images/Santorini.jpg);
-	background-position: center;
-	background-size: cover;
-}
-
-.Temple-F{
-	background-image: url(Images/Temple.jpg);
-	background-position: center;
-	background-size: cover;
-}
-.Stairs-F{
-	background-image: url(Images/Stairs.jpg);
-	background-position: center;
-	background-size: cover;
-}
-
 .Stories{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.304),rgba(238, 238, 159, 0.277)),url(Images/Cafe.jpg);
 }
