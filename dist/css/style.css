@@ -517,7 +517,7 @@ body {
   }
 }
 
-.History-Header {
+.Headers {
   height: 16vh;
   font-size: 16vh;
   display: -webkit-box;
@@ -534,13 +534,13 @@ body {
 }
 
 @media (min-width: 300px) {
-  .History-Header {
+  .Headers {
     font-size: 8vh;
   }
 }
 
 @media (min-width: 1100px) {
-  .History-Header {
+  .Headers {
     font-size: 16vh;
   }
 }
@@ -738,33 +738,6 @@ body {
   }
 }
 
-.Attractions-Header {
-  height: 16vh;
-  font-size: 16vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-}
-
-@media (min-width: 300px) {
-  .Attractions-Header {
-    font-size: 8vh;
-  }
-}
-
-@media (min-width: 1100px) {
-  .Attractions-Header {
-    font-size: 16vh;
-  }
-}
-
 .card-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -895,12 +868,43 @@ body {
           justify-content: center;
   height: inherit;
   word-spacing: 10px;
-  -webkit-text-stroke: .1px black;
 }
 
-.Stories {
+.Food {
   background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(22, 201, 186, 0.304)), to(rgba(238, 238, 159, 0.277))), url(Images/Cafe.jpg);
   background-image: linear-gradient(to left bottom, rgba(22, 201, 186, 0.304), rgba(238, 238, 159, 0.277)), url(Images/Cafe.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Food-Images {
+  height: inherit;
+  width: 30vh;
+  overflow: hidden;
+  border: 1vh solid #e3e7ec;
+}
+
+@media (min-width: 300px) {
+  .Food-Images {
+    height: 30vh;
+  }
+}
+
+@media (min-width: 900px) {
+  .Food-Images {
+    height: 40vh;
+  }
 }
 
 .Book-Stay {

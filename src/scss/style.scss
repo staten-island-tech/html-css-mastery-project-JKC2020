@@ -197,7 +197,7 @@ body {
 	height: 90vh;
   }
 }
-.History-Header{
+.Headers{
   height: 16vh;
   font-size: 16vh;
   display: flex;
@@ -310,20 +310,6 @@ body {
 	clip-path: polygon(0 0,97% 0%, 100% 95%, 0% 100%);
   }
 }
-.Attractions-Header{
-	height: 16vh;
-	font-size: 16vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	@include phone {
-		font-size: 8vh;
-	  }
-	  @include laptop{
-		  font-size: 16vh;
-	  }
-}
 .card-box{
 	display: flex;
 	width: 100%;
@@ -408,11 +394,26 @@ body {
 	justify-content: center;
 	height: inherit;
 	word-spacing: 10px;
-	-webkit-text-stroke: .1px black;
 }
-.Stories{
+.Food{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.304),rgba(238, 238, 159, 0.277)),url(Images/Cafe.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
+.Food-Images{ 
+	height: inherit;
+	width: 30vh;
+	overflow: hidden;
+	border: 1vh solid #e3e7ec;
+	@include phone {
+	  height: 30vh;
+	}
+	@include tablet {
+	  height: 40vh;
+	}
+  }
 .Book-Stay{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.204),rgba(238, 238, 159, 0.177)),url(Images/Book.jpg);
 }
