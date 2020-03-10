@@ -440,12 +440,27 @@ body {
 	border: 1vh solid #e3e7ec;
 	@include phone {
 	  height: 30vh;
+	  width: 30vh;
 	}
+	@include tablet {
+		height: 20vh;
+		width: 20vh;
+	  }
 	@include laptop {
 		height: 40vh;
+		width: 40vh;
 	  }
   }
-
+.logo{
+	height: 15vh;
+	animation: jello 2s;
+}
+.logos{
+	display: flex;
+	width: inherit;
+	justify-content: space-evenly;
+}
 .Book-Stay{
   background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.204),rgba(238, 238, 159, 0.177)),url(Images/Book.jpg);
+  display: flex;
 }
