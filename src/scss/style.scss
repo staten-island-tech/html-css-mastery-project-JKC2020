@@ -451,16 +451,30 @@ body {
 		width: 40vh;
 	  }
   }
+  .Media{
+	background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.304),rgba(238, 238, 159, 0.277)),url(Images/Book.jpg);
+	display: flex;
+	flex-direction: column;
+  }
 .logo{
-	height: 15vh;
-	animation: jello 2s;
+	height: 20vh;
+	animation: jello 2s infinite;
+	background-image: white;	
 }
 .logos{
 	display: flex;
-	width: inherit;
+	width: fill;
+	height: fill;
 	justify-content: space-evenly;
+	align-items: center;
+	@include phone {
+		flex-direction: column;
+	  }
+	  @include tablet {
+			flex-direction: row;
+	  }
+	  @include laptop {	
+		flex-direction: row;
+	  }
 }
-.Book-Stay{
-  background-image: linear-gradient(to left bottom,rgba(22, 201, 186, 0.204),rgba(238, 238, 159, 0.177)),url(Images/Book.jpg);
-  display: flex;
-}
+

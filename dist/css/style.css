@@ -1057,27 +1057,67 @@ body {
   }
 }
 
+.Media {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(22, 201, 186, 0.304)), to(rgba(238, 238, 159, 0.277))), url(Images/Book.jpg);
+  background-image: linear-gradient(to left bottom, rgba(22, 201, 186, 0.304), rgba(238, 238, 159, 0.277)), url(Images/Book.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .logo {
-  height: 15vh;
-  -webkit-animation: jello 2s;
-          animation: jello 2s;
+  height: 20vh;
+  -webkit-animation: jello 2s infinite;
+          animation: jello 2s infinite;
+  background-image: white;
 }
 
 .logos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: inherit;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.Book-Stay {
-  background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(22, 201, 186, 0.204)), to(rgba(238, 238, 159, 0.177))), url(Images/Book.jpg);
-  background-image: linear-gradient(to left bottom, rgba(22, 201, 186, 0.204), rgba(238, 238, 159, 0.177)), url(Images/Book.jpg);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (min-width: 300px) {
+  .logos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 900px) {
+  .logos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 1100px) {
+  .logos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 /*# sourceMappingURL=style.css.map */
